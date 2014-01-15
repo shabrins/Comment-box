@@ -1,0 +1,21 @@
+html
+  head
+    title Comment Box
+  body
+    .msg(style='position: absolute; left: 585px; top: 29px; width: 780px; height: 695px;')
+      h1 Comments:
+      hr
+      | {COMMENT}
+    .photo(style='height: 200px; width: 150px; float: left;')
+      p
+        img(border='0', src='./Photos/step.jpg', alt='ThoughtWorks', width='436', height='316')
+      br
+      form(action='/postComment', method='post')
+        b Name:
+        input(type='text', name='name', value='')
+        br
+        b Comment:
+        textarea#comments(name='comment', wrap='dard')
+        br
+        center
+          input(type='submit', value='Post it')
